@@ -1,6 +1,6 @@
 // TypeScript Version: 2.9
 
-import * as React from 'react';
+import React from 'react';
 
 type CSSProperties = {
   [key: string]: string | number | CSSProperties;
