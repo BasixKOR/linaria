@@ -1,19 +1,159 @@
 # Change Log
 
+## 4.1.12
+
+### Patch Changes
+
+- @linaria/atomic@4.2.6
+- @linaria/core@4.2.6
+- @linaria/react@4.3.4
+
+## 4.1.11
+
+### Patch Changes
+
+- Updated dependencies [61fe2560]
+- Updated dependencies [77bcf2e7]
+  - @linaria/atomic@4.2.5
+  - @linaria/server@4.1.0
+  - @linaria/core@4.2.5
+  - @linaria/react@4.3.3
+
+## 4.1.10
+
+### Patch Changes
+
+- @linaria/atomic@4.2.4
+- @linaria/core@4.2.4
+- @linaria/react@4.3.2
+
+## 4.1.9
+
+### Patch Changes
+
+- 6b8bff49: Switch website to pnpm
+- 5edde648: Upgrade Babel to support TypeScript 4.9. Fixes #1133.
+- Updated dependencies [922f20d6]
+- Updated dependencies [5edde648]
+  - @linaria/react@4.3.1
+  - @linaria/atomic@4.2.3
+  - @linaria/core@4.2.3
+
+## 4.1.8
+
+### Patch Changes
+
+- Updated dependencies [63f56d47]
+- Updated dependencies [c26d4667]
+  - @linaria/react@4.3.0
+  - @linaria/atomic@4.2.2
+  - @linaria/core@4.2.2
+
+## 4.1.7
+
+### Patch Changes
+
+- Updated dependencies [6de22792]
+  - @linaria/react@4.2.1
+  - @linaria/atomic@4.2.1
+  - @linaria/core@4.2.1
+
+## 4.1.6
+
+### Patch Changes
+
+- Updated dependencies [1e88e95d]
+  - @linaria/atomic@4.2.0
+  - @linaria/core@4.2.0
+  - @linaria/react@4.2.0
+
+## 4.1.5
+
+### Patch Changes
+
+- Updated dependencies [87ffe61c]
+  - @linaria/atomic@4.1.5
+  - @linaria/core@4.1.4
+  - @linaria/react@4.1.5
+
+## 4.1.4
+
+### Patch Changes
+
+- @linaria/atomic@4.1.4
+- @linaria/core@4.1.3
+- @linaria/react@4.1.4
+
+## 4.1.3
+
+### Patch Changes
+
+- Updated dependencies [c0bd271a]
+  - @linaria/react@4.1.3
+  - @linaria/atomic@4.1.3
+  - @linaria/core@4.1.2
+
+## 4.1.2
+
+### Patch Changes
+
+- @linaria/atomic@4.1.2
+- @linaria/core@4.1.1
+- @linaria/react@4.1.2
+
+## 4.1.1
+
+### Patch Changes
+
+- Updated dependencies [2abc55b3]
+  - @linaria/react@4.1.1
+  - @linaria/atomic@4.1.1
+
+## 4.1.0
+
+### Patch Changes
+
+- @linaria/atomic@4.1.0
+- @linaria/core@4.1.0
+- @linaria/react@4.1.0
+
+## 4.0.0
+
+### Major Changes
+
+- bc0cbeea: A completely new async mode with native support for Vite, Rollup, esbuild and Webpack resolvers.
+
+  BREAKING CHANGES: Despite the fact, that it should be fully compatible with 3.0 and 2.0 branches, the new version of styles evaluator can have some serious bugs which can make your project unbuildable (however, since there is no runtime, if the build is finished successfully, everything will continue work as it was on 2.0 and 3.0). If you face some problems please let us know and we will fix it as soon as possible.
+
+### Patch Changes
+
+- 8be5650d: The repo has been migrated to PNPM and Turborepo
+- ea41d440: New package @linaria/tags that contains all abstract logic for tags processors.
+- Updated dependencies [f0cddda4]
+  - @linaria/atomic@4.0.0
+  - @linaria/core@4.0.0
+  - @linaria/react@4.0.0
+  - @linaria/server@4.0.0
+
+## 3.0.0-beta.21
+
+### Patch Changes
+
+- Updated dependencies [17c83e34]
+  - @linaria/react@3.0.0-beta.21
+  - @linaria/core@3.0.0-beta.21
+  - @linaria/atomic@3.0.0-beta.21
+
 ## 3.0.0-beta.20
 
 ### Patch Changes
 
 - 8be5650d: The repo has been migrated to PNPM and Turborepo
-- Updated dependencies [8be5650d]
 - Updated dependencies
   - @linaria/atomic@3.0.0-beta.20
   - @linaria/core@3.0.0-beta.20
   - @linaria/react@3.0.0-beta.20
   - @linaria/server@3.0.0-beta.20
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 # [3.0.0-beta.19](https://github.com/callstack/linaria/compare/v3.0.0-beta.18...v3.0.0-beta.19) (2022-06-03)
 
