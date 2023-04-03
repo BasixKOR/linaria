@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.4.4
+
+### Patch Changes
+
+- a62e7ba6: Avoid parsing json as js
+
 ## 4.4.3
 
 ### Patch Changes
