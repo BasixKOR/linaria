@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.4.5
+
+### Patch Changes
+
+- Updated dependencies [54ab61b2]
+  - @linaria/shaker@4.2.11
+  - @linaria/tags@4.3.5
+  - @linaria/utils@4.3.4
+  - @linaria/core@4.2.10
+
 ## 4.4.4
 
 ### Patch Changes
