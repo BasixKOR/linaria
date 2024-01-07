@@ -11,5 +11,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('root'));
 
 // eslint-disable-next-line import/prefer-default-export
-const globals = "gulwyw3";
-exports.globals = globals;
+const globals = exports.globals = "gulwyw3";

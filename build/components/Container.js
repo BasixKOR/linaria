@@ -10,5 +10,4 @@ const Container = /*#__PURE__*/(0, _react.styled)('div')({
   class: "cvg8y9q",
   propsAsIs: false
 });
-var _default = Container;
-exports.default = _default;
+var _default = exports.default = Container;

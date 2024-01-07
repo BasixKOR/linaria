@@ -1,5 +1,165 @@
 # Change Log
 
+## 6.0.0
+
+### Major Changes
+
+- 2ac94b99: BREAKING CHANGE: Linaria has been migrated to wyw-in-js.
+
+  # Migration Guide
+
+  ## For Users
+
+  The main breaking change is that all tooling has been moved from the `@linaria` scope to the `@wyw-in-js` scope. This means that you will need to update your dependencies as follows:
+
+  | Old                      | New                       |
+  | ------------------------ | ------------------------- |
+  | @linaria/babel-preset    | @wyw-in-js/babel-preset   |
+  | @linaria/cli             | @wyw-in-js/cli            |
+  | @linaria/esbuild         | @wyw-in-js/esbuild        |
+  | @linaria/rollup          | @wyw-in-js/rollup         |
+  | @linaria/shaker          | discontinued              |
+  | @linaria/vite            | @wyw-in-js/vite           |
+  | @linaria/webpack4-loader | discontinued              |
+  | @linaria/webpack5-loader | @wyw-in-js/webpack-loader |
+
+  There is no longer a need to install `@linaria/shaker` as it is now part of `@wyw-in-js/transform`, which will be installed automatically with the bundler plugins.
+
+  The configuration file has been renamed from `linaria.config.js` (`linariarc`) to `wyw-in-js.config.js` (`.wyw-in-jsrc`).
+
+  ## For Custom Processor Developers
+
+  Base classes for processors and most helpers have been moved to `@wyw-in-js/processor-utils`.
+
+  All APIs that had `linaria` in their names have been renamed:
+
+  - The field that stores meta information in runtime has been renamed from `__linaria` to `__wyw_meta`
+  - The export with all interpolated values has been renamed from `__linariaPreval` to `__wywPreval`
+  - The caller name in Babel has been renamed from `linaria` to `wyw-in-js`
+
+  For additional information, please visit the [wyw-in-js.dev](https://wyw-in-js.dev).
+
+### Patch Changes
+
+- Updated dependencies [60e6b7e2]
+- Updated dependencies [2ac94b99]
+  - @linaria/atomic@6.0.0
+  - @linaria/core@6.0.0
+  - @linaria/react@6.0.0
+  - @linaria/server@6.0.0
+
+## 5.0.3
+
+### Patch Changes
+
+- Updated dependencies [4b083b7c]
+  - @linaria/react@5.0.3
+  - @linaria/atomic@5.0.3
+
+## 5.0.2
+
+### Patch Changes
+
+- Updated dependencies [1e889937]
+  - @linaria/react@5.0.2
+  - @linaria/atomic@5.0.2
+  - @linaria/core@5.0.2
+
+## 5.0.1
+
+### Patch Changes
+
+- @linaria/atomic@5.0.1
+- @linaria/core@5.0.1
+- @linaria/react@5.0.1
+
+## 5.0.0
+
+### Major Changes
+
+- 88e07613: Rewritten dependecny tree processing with support for wildcard re-exports.
+- cb853e14: All processing stages were merged into one generators-based processor. It allows the implementation of more complex workflows to support features like dynamic imports and re-exports.
+
+### Patch Changes
+
+- 2a1e24a0: Upgrade TypeScript to 5.2
+- Updated dependencies [9cb4143d]
+- Updated dependencies [88e07613]
+- Updated dependencies [2a1e24a0]
+- Updated dependencies [cb853e14]
+  - @linaria/atomic@5.0.0
+  - @linaria/core@5.0.0
+  - @linaria/react@5.0.0
+  - @linaria/server@5.0.0
+
+## 4.5.4
+
+### Patch Changes
+
+- @linaria/atomic@4.5.4
+- @linaria/core@4.5.4
+- @linaria/react@4.5.4
+
+## 4.5.3
+
+### Patch Changes
+
+- e59bf809: Shaker mistakenly counts references in types as valuable and keeps referenced variables alive.
+- 520ba8da: Debug mode for CLI, Webpack 5 and Vite. When enabled, prints brief perf report to console and information about processed dependency tree to the specified file.
+- Updated dependencies [79557248]
+- Updated dependencies [e59bf809]
+  - @linaria/atomic@4.5.3
+  - @linaria/core@4.5.3
+  - @linaria/react@4.5.3
+
+## 4.5.2
+
+### Patch Changes
+
+- 1bf5c5b8: The cache has been improved, which should address the build time issues for Webpack 4/5 and resolve HMR-related problems for Vite. Fixes #1199, #1265 and maybe some more.
+  - @linaria/atomic@4.5.2
+  - @linaria/core@4.5.2
+  - @linaria/react@4.5.2
+
+## 4.5.1
+
+### Patch Changes
+
+- Updated dependencies [ceca1611]
+- Updated dependencies [13258306]
+  - @linaria/react@4.5.1
+  - @linaria/atomic@4.5.1
+  - @linaria/core@4.5.1
+
+## 4.5.0
+
+### Minor Changes
+
+- 16c057df: Breaking Change: Performance Optimization for `styled`
+
+  When a component is wrapped in `styled`, Linaria needs to determine if that component is already a styled component. To accomplish this, the wrapped component is included in the list of variables for evaluation, along with the interpolated values used in styles. The issue arises when a wrapped component, even if it is not styled, brings along a substantial dependency tree. This situation is particularly evident when using `styled` to style components from third-party UI libraries.
+
+  To address this problem, Linaria will now examine the import location of the component and check if there is an annotation in the `package.json` file of the package containing the components. This annotation indicates whether the package includes other Linaria components. If there is no such annotation, Linaria will refrain from evaluating the component.
+
+  Please note that this Breaking Change solely affects developers of component libraries. In order for users to style components from your library, you must include the `linaria.components` property in the library's `package.json` file. This property should have a mask that covers all imported files with components. Here's an example of how to specify it:
+
+  ```json
+  "linaria": {
+    "components": "**/*"
+  }
+  ```
+
+### Patch Changes
+
+- af5bb92d: The end of support for Node.js 14. Migration to pnpm 8.
+- Updated dependencies [16c057df]
+- Updated dependencies [af5bb92d]
+- Updated dependencies [10859924]
+  - @linaria/react@4.5.0
+  - @linaria/atomic@4.5.0
+  - @linaria/core@4.5.0
+  - @linaria/server@4.5.0
+
 ## 4.1.16
 
 ### Patch Changes
