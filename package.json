@@ -1,6 +1,6 @@
 {
   "name": "linaria-website",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "private": true,
   "description": "Linaria website",
   "exports": {
@@ -42,8 +42,8 @@
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.5",
     "@linaria/stylelint": "workspace:^",
-    "@wyw-in-js/babel-preset": "^0.4.0",
-    "@wyw-in-js/webpack-loader": "^0.4.0",
+    "@wyw-in-js/babel-preset": "^0.5.3",
+    "@wyw-in-js/webpack-loader": "^0.5.3",
     "babel-loader": "^8.2.5",
     "babel-plugin-module-resolver": "^4.1.0",
     "cross-env": "^7.0.3",
