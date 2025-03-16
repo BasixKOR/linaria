@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.2
+
+### Patch Changes
+
+- bd8d45fd: Support for React 19
+
 ## 6.2.1
 
 ### Patch Changes
