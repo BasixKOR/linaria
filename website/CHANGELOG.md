@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.2.1
+
+### Patch Changes
+
+- Updated dependencies [bd8d45fd]
+  - @linaria/react@6.2.2
+  - @linaria/atomic@6.2.1
+
 ## 6.2.0
 
 ### Minor Changes
