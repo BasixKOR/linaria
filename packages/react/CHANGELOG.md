@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.1.2
+
+### Patch Changes
+
+- @linaria/core@8.1.2
+
 ## 8.1.1
 
 ### Patch Changes
